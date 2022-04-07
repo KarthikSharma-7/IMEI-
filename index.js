@@ -29,7 +29,7 @@ app.post("/", (req, res) => {
     }
     i = i - 2;
   }
-  if (s % 10 === 0) {
+  if (s % 10 !== 0) {
     res.status(400).send("Invalid IMEI number.....Kindly recheck it");
   } else {
     res.status(200).send("Valid IMEI");
